@@ -45,6 +45,9 @@ const bh = selectAll('.bottom-content .text-content h4'),
       ch = select('.cta-text h1'),
       cb = select('.cta-text button'),
       ci = select('#cta-img'),
+      cth = select('.contact h4'),
+      ctc = selectAll('.contact p'),
+      cr = select('footer p');
       li = select('#logo-img'),
       mi = select('#middle-img'),
       nl = selectAll('header nav a'),
@@ -86,3 +89,12 @@ bc[1].innerText = siteContent['main-content']['product-content'];
 // vision
 bh[2].innerText = siteContent['main-content']['vision-h4'];
 bc[2].innerText = siteContent['main-content']['vision-content'];
+
+// contact
+cth.innerText = siteContent['contact']['contact-h4'];
+ctc[0].innerText = siteContent['contact']['address'];
+ctc[1].innerText = siteContent['contact']['phone'];
+ctc[2].innerText = siteContent['contact']['email'];
+
+// copyright
+cr.innerText = siteContent['footer']['copyright'];
