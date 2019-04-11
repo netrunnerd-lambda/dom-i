@@ -50,14 +50,28 @@ const bh = selectAll('.bottom-content .text-content h4'),
       cr = select('footer p');
       li = select('#logo-img'),
       mi = select('#middle-img'),
+      n = select('header nav'),
       nl = selectAll('header nav a'),
       th = selectAll('.top-content .text-content h4'),
       tc = selectAll('.top-content .text-content p');
 
 // nav
+const blog = document.createElement('a'),
+      hdesk = document.createElement('a');
+
+blog.innerText = 'Blog';
+hdesk.innerText = 'Helpdesk';
+
+n.prepend(blog);
+n.appendChild(hdesk);
+
 nl.forEach((e, i) => {
   e.innerText = siteContent['nav'][`nav-item-${i + 1}`];
 });
+
+nl = selectAll('header nav a');
+
+nl.forEach(e => e.style.color = 'green');
 
 // logo
 li.setAttribute('src', siteContent['nav']['img-src']);
