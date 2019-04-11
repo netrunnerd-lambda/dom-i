@@ -51,21 +51,38 @@ const bh = selectAll('.bottom-content .text-content h4'),
       th = selectAll('.top-content .text-content h4'),
       tc = selectAll('.top-content .text-content p');
 
+// nav
 nl.forEach((e, i) => {
   e.innerText = siteContent['nav'][`nav-item-${i + 1}`];
 });
 
+// logo
 li.setAttribute('src', siteContent['nav']['img-src']);
 
+// cta
 ch.innerText = siteContent['cta']['h1'];
 cb.innerText = siteContent['cta']['button'];
 ci.setAttribute('src', siteContent['cta']['img-src']);
 
+// features
 th[0].innerText = siteContent['main-content']['features-h4'];
 tc[0].innerText = siteContent['main-content']['features-content'];
 
+// about
 th[1].innerText = siteContent['main-content']['about-h4'];
 tc[1].innerText = siteContent['main-content']['about-content'];
 
+// middle-img
 mi.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+// services
+bh[0].innerText = siteContent['main-content']['services-h4'];
+bc[0].innerText = siteContent['main-content']['services-content'];
+
+// product
+bh[1].innerText = siteContent['main-content']['product-h4'];
+bc[1].innerText = siteContent['main-content']['product-content'];
+
+// vision
+bh[2].innerText = siteContent['main-content']['vision-h4'];
+bc[2].innerText = siteContent['main-content']['vision-content'];
