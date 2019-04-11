@@ -37,6 +37,35 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const select = s => document.querySelector(s),
+      selectAll = s => document.querySelectorAll(s);
+
+const bh = selectAll('.bottom-content .text-content h4'), 
+      bc = selectAll('.bottom-content .text-content p'),
+      ch = select('.cta-text h1'),
+      cb = select('.cta-text button'),
+      ci = select('#cta-img'),
+      li = select('#logo-img'),
+      mi = select('#middle-img'),
+      nl = selectAll('header nav a'),
+      th = selectAll('.top-content .text-content h4'),
+      tc = selectAll('.top-content .text-content p');
+
+nl.forEach((e, i) => {
+  e.innerText = siteContent['nav'][`nav-item-${i + 1}`];
+});
+
+li.setAttribute('src', siteContent['nav']['img-src']);
+
+ch.innerText = siteContent['cta']['h1'];
+cb.innerText = siteContent['cta']['button'];
+ci.setAttribute('src', siteContent['cta']['img-src']);
+
+th[0].innerText = siteContent['main-content']['features-h4'];
+tc[0].innerText = siteContent['main-content']['features-content'];
+
+th[1].innerText = siteContent['main-content']['about-h4'];
+tc[1].innerText = siteContent['main-content']['about-content'];
+
+mi.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
